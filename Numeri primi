@@ -4,7 +4,7 @@
 #include <stdbool.h>
 int main()
 {
-    int ultimo_numero = 2.0;
+    int ultimo_numero = 2;
     bool primo = 1;
     int numero;
     
@@ -30,13 +30,16 @@ int main()
         
         divisore--;
       }  
-      if (modulo == 0)
-        printf("radice del numero: %i\n", divisore + 1);
-        else
-        printf ("0\n");
+      
      if (primo)
        printf("primo\n");
-       
+      
+       int radice = sqrt(numero);
+      if (modulo == 0)
+        printf("radice del numero: %i\n", radice);
+        else
+        printf ("0\n");
     }
     return 0;
 }
+
