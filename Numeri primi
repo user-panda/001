@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+#include <stdbool.h>
+int main()
+{
+    int ultimo_numero = 2.0;
+    bool primo = 1;
+    int numero;
+    
+    while (1 == 1)
+    {
+      primo = 1;
+      printf("inserisci un numero o metti 0 per uscire: ");
+      scanf("%d", &numero);
+      if (numero == 0)
+       return 0;
+      
+      int divisore = sqrt(numero);
+      int modulo = fmod(numero , sqrt(numero));
+      while (primo && ultimo_numero < divisore)
+      {
+   
+        if (numero % divisore == 0 )
+        {
+         printf("non primo\n");
+         primo = 0;
+   
+        }
+        
+        divisore--;
+      }  
+      if (modulo == 0)
+        printf("radice del numero: %i\n", divisore + 1);
+        else
+        printf ("0\n");
+     if (primo)
+       printf("primo\n");
+       
+    }
+    return 0;
+}
